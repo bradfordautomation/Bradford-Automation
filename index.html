@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bradford Automation — AI Automations for Small Business</title>
+  <meta name="description" content="AI automation systems for local businesses — lead replies, appointment reminders, review responses, social posting and more. Save time, close more customers." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><text y='0.9em' font-size='90'>🔧</text></svg>">
+  <style>
+    /* Simple responsive utility CSS (keeps site standalone) */
+    :root{--accent:#0f6efd;--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background:linear-gradient(180deg,#071024 0%, #071927 60%);}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 20px rgba(15,110,253,0.12)}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+    nav a{color:#cfe7ff;margin-left:18px;text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:24px;border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#dbeafe}
+
+    /* Features grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+    .feature{padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    .feature h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+
+    /* Pricing */
+    .pricing{display:flex;gap:18px;margin-top:20px}
+    .plan{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03)}
+    .plan h4{margin:0}
+    .price{font-size:24px;font-weight:800;margin:8px 0}
+
+    /* Testimonials / FAQ */
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+
+    footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)}.testimonials{grid-template-columns:1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}.brand h1{font-size:18px}}
+
+    /* Contact form */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{background:transparent;color:#e6eef8;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BA</div>
+        <div>
+          <h1>Bradford Automation</h1>
+          <p class="lead">AI automations that save time and turn leads into customers.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="card">
+            <h2>Automate replies, reminders, reviews, and posts — without the fuss.</h2>
+            <p class="muted">We build plug-and-play AI systems for local businesses: real estate agents, salons, gyms, restaurants, and more. Start saving hours every week with custom automations that work the way you already do.</p>
+            <div class="cta">
+              <button class="btn" onclick="scrollToContact()">Get a free demo</button>
+              <button class="btn ghost" onclick="openPricing()">View pricing</button>
+            </div>
+
+            <div class="grid" style="margin-top:22px">
+              <div class="feature"><h3>Lead Replies</h3><p class="muted">Instant, on-brand replies to new leads — convert faster with 24/7 responsiveness.</p></div>
+              <div class="feature"><h3>Appointment Reminders</h3><p class="muted">Reduce no-shows with automated SMS and email reminders.</p></div>
+              <div class="feature"><h3>Review Responses</h3><p class="muted">Keep your online reputation active with tailored review replies.</p></div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <h3>How it works</h3>
+            <ol class="muted">
+              <li>We audit your current lead flow (15 minutes).</li>
+              <li>We build a tailored automation using AI + no-code tools.</li>
+              <li>We test with real messages and hand it to you — training included.</li>
+            </ol>
+            <p class="muted" style="margin-top:8px">No heavy installs. No 12-month lock-ins. Simple, fast, measurable.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Demo: Lead Auto-Reply</h3>
+            <p class="muted">Try a mocked demo of how a lead reply flows. (Replace with your real demo video later.)</p>
+            <div style="margin:10px 0;background:#021226;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px">
+              <div style="font-weight:700">New lead:</div>
+              <div style="background:#021b2e;padding:10px;border-radius:8px">Hi, I'm interested in your services. Can I schedule a time to talk?</div>
+              <div style="font-weight:700">Automated reply:</div>
+              <div style="background:#062233;padding:10px;border-radius:8px">Thanks for reaching out! I’m Bradford Automation — we can do a quick call at 3pm or 4pm today. Which works best for you?</div>
+            </div>
+            <p class="muted">We hand you the code & template so you own it — or we manage it for you as a subscription.</p>
+
+            <h4 style="margin-top:12px">Quick facts</h4>
+            <ul class="muted">
+              <li>Typical install time: 1–3 days</li>
+              <li>Works with: Gmail, Google Forms, Calendly, Facebook, Instagram DMs</li>
+              <li>Data & privacy-first: You own your data</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <h4>Trusted by local businesses</h4>
+            <div class="testimonials">
+              <div style="padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>"Saved us 8 hours/week"</strong><div class="muted">— Alex, Salon owner</div></div>
+              <div style="padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>"More leads booked"</strong><div class="muted">— Maria, Real estate</div></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="services" class="card" style="margin-top:22px">
+        <h2>Services</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div>
+            <h3>Lead Auto-Reply</h3>
+            <p class="muted">Capture and respond to new leads instantly. Includes templated replies, routing, and follow-up sequences.</p>
+          </div>
+          <div>
+            <h3>Appointment Reminders</h3>
+            <p class="muted">Text or email reminders with flexible timing and reschedule links to reduce no-shows.</p>
+          </div>
+          <div>
+            <h3>Review & Reputation</h3>
+            <p class="muted">Detect new reviews and auto-generate thoughtful responses that match your tone.</p>
+          </div>
+          <div>
+            <h3>Social Content Automation</h3>
+            <p class="muted">AI-generated captions and auto-scheduling to keep your feed active and local SEO-friendly.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="card" style="margin-top:18px">
+        <h2>Pricing</h2>
+        <div class="pricing">
+          <div class="plan">
+            <h4>Starter</h4>
+            <div class="price">$150 setup</div>
+            <p class="muted">One automation (lead reply or reminders). Includes training and template.</p>
+            <ul class="muted"><li>1 automation</li><li>2-week support</li></ul>
+          </div>
+          <div class="plan">
+            <h4>Growth</h4>
+            <div class="price">$350 setup</div>
+            <p class="muted">Full suite install (leads, reminders, reviews). Optional monthly management.</p>
+            <ul class="muted"><li>Up to 3 automations</li><li>30-day support</li><li>Optional $79/month maintenance</li></ul>
+          </div>
+          <div class="plan">
+            <h4>Managed</h4>
+            <div class="price">From $99/month</div>
+            <p class="muted">We manage everything, monitor performance, and iterate monthly.</p>
+            <ul class="muted"><li>Ongoing updates</li><li>Performance reports</li><li>Priority support</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="card" style="margin-top:18px">
+        <h2>About Bradford Automation</h2>
+        <p class="muted">Founded by Bradford — a teen entrepreneur building practical AI tools for local businesses. We focus on measurable wins: faster replies, fewer no-shows, and more booked appointments. Your data stays yours — we use privacy-first connections and transparent workflows.</p>
+      </section>
+
+      <section id="contact" class="card" style="margin-top:18px">
+        <h2>Contact / Get a free demo</h2>
+        <p class="muted">Fill the form and we’ll send a short demo tailored to your business.</p>
+        <form id="contactForm" onsubmit="sendMail(event)">
+          <input id="name" placeholder="Your name" required />
+          <input id="business" placeholder="Business name" required />
+          <input id="email" type="email" placeholder="Email" required />
+          <select id="service">
+            <option>Lead auto-reply</option>
+            <option>Appointment reminders</option>
+            <option>Review responses</option>
+            <option>Social posting</option>
+          </select>
+          <textarea id="notes" placeholder="Tell us a little about your workflow (optional)" rows="4"></textarea>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button type="submit" class="btn">Send demo request</button>
+            <button type="button" class="btn ghost" onclick="openPricing()">See pricing</button>
+          </div>
+        </form>
+        <p class="muted" style="margin-top:10px">Or email: <a href="mailto:hello@bradfordautomation.com">hello@bradfordautomation.com</a></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">© Bradford Automation — Built for local businesses</div>
+      <div class="muted">Follow: @bradfordautomation</div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToContact(){document.getElementById('contact').scrollIntoView({behavior:'smooth'});}    
+    function openPricing(){document.getElementById('pricing').scrollIntoView({behavior:'smooth'});}    
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const business = document.getElementById('business').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const notes = document.getElementById('notes').value;
+      const subject = encodeURIComponent('Demo request from ' + business + ' — ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nBusiness: ' + business + '\nEmail: ' + email + '\nService: ' + service + '\n\nNotes:\n' + notes);
+      // opens user's email client with a prefilled message. Replace with a backend endpoint or Formspree if you want server submission.
+      window.location.href = 'mailto:hello@bradfordautomation.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
